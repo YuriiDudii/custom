@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .custom-block {
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .custom-block::before, .custom-block::after {
+            content: "";
+            background-color: green;
+            width: 20px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .custom-block::before {
+            left: -20px;
+        }
+
+        .custom-block::after {
+            right: -20px;
+        }
+    </style>
+    <title>Custom Block</title>
+</head>
+<body>
+    <div class="custom-block">Content</div>
+</body>
+</html>
